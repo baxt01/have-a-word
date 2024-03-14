@@ -1,27 +1,55 @@
-import React from 'react';
-const axios = require('axios');
+import React, { useState } from 'react';
+import axios from 'axios';
 
-export default async function Translate () {
-const encodedParams = new URLSearchParams();
-encodedParams.set('from', 'auto');
-encodedParams.set('to', 'en');
-encodedParams.set('text', 'xin chào');
+const Translate = () => {
+    const [text, setText] = useState('');
+    const [translatedText, setTranslatedText] = useState('');
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
 
-const options = {
-  method: 'POST',
-  url: 'https://google-translate113.p.rapidapi.com/api/v1/translator/text',
-  headers: {
-    'content-type': 'application/x-www-form-urlencoded',
-    'X-RapidAPI-Key': '33df205f37msh6cb553b466fa03ap1ad12fjsn220ce4afdbc8',
-    'X-RapidAPI-Host': 'google-translate113.p.rapidapi.com'
-  },
-  data: encodedParams,
+    const translateText = async () => {
+        setLoading(true);
+        setError(null);
+
+        try {
+            const response = await axios.post(
+                'https://translation.googleapis.com/language/translate/v2',
+                {
+                    q: text,
+                    source: 'en', // Source language code (English)
+                    target: 'fr', // Target language code (French)
+                    format: 'text',
+                },
+                {
+                    params: {
+                        key: 'AIzaSyCj0SwvjXBthtNYNhFw8Oe3gfg-7XX2MQ4', // Replace with your Google Cloud Translate API key
+                    },
+                }
+            );
+
+            setTranslatedText(response.data.data.translations[0].translatedText);
+        } catch (error) {
+            setError(error.message);
+        }
+
+        setLoading(false);
+    };
+
+    return (
+        <div>
+            <textarea
+                value={text}
+                onChange={(e) => setText(e.target.value)}
+                placeholder="Enter text to translate..."
+            />
+            <button onClick={translateText} disabled={loading}>
+                Translate
+            </button>
+            {loading && <p>Loading...</p>}
+            {translatedText && <p>Translated Text: {translatedText}</p>}
+            {error && <p>Error: {error}</p>}
+        </div>
+    );
 };
 
-try {
-	const response = await axios.request(options);
-	console.log(response.data);
-} catch (error) {
-	console.error(error);
-    }
-}
+export default Translate;
