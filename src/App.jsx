@@ -6,6 +6,17 @@ import './components/Header'
 function App() {
   const [count, setCount] = useState(0)
 
+  //Flowbite source paths
+  module.exports = {
+
+    content: [
+        // ...
+        'node_modules/flowbite-react/lib/esm/**/*.js'
+    ]
+
+}
+
+
   return (
     <>
       
