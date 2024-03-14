@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const Translate = () => {
+export default Translate = () => {
     const [text, setText] = useState('');
     const [translatedText, setTranslatedText] = useState('');
     const [loading, setLoading] = useState(false);
@@ -52,4 +52,4 @@ const Translate = () => {
     );
 };
 
-export default Translate;
+// export default Translate;
