@@ -3,7 +3,7 @@ import Translate from './components/Translate.jsx'
 import './App.css'
 import './components/Header'
 
-function App() {
+export default function App() {
   const [count, setCount] = useState(0)
   return (
     <>
@@ -12,5 +12,3 @@ function App() {
     </>
   )
 }
-
-export default App
