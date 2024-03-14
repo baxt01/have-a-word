@@ -14,13 +14,3 @@ function App() {
 }
 
 export default App
-
-  //Flowbite source paths
-  module.exports = {
-
-    content: [
-        // ...
-        'node_modules/flowbite-react/lib/esm/**/*.js'
-    ]
-
-}
