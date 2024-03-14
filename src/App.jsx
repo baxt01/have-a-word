@@ -3,20 +3,8 @@ import Translate from './components/Translate.jsx'
 import './App.css'
 import './components/Header'
 
-function App() {
+export default function App() {
   const [count, setCount] = useState(0)
-
-  //Flowbite source paths
-  module.exports = {
-
-    content: [
-        // ...
-        'node_modules/flowbite-react/lib/esm/**/*.js'
-    ]
-
-}
-
-
   return (
     <>
       
@@ -25,5 +13,3 @@ function App() {
     </>
   )
 }
-
-export default App
