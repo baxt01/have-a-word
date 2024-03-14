@@ -5,6 +5,15 @@ import './components/Header'
 
 function App() {
   const [count, setCount] = useState(0)
+  return (
+    <>
+      
+      <Translate />
+    </>
+  )
+}
+
+export default App
 
   //Flowbite source paths
   module.exports = {
@@ -15,14 +24,3 @@ function App() {
     ]
 
 }
-
-
-  return (
-    <>
-      
-      <Translate />
-    </>
-  )
-}
-
-export default App
