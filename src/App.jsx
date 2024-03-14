@@ -10,6 +10,7 @@ function App() {
     <>
       
       <Translate />
+      <Header />
     </>
   )
 }
