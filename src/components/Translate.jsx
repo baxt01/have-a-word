@@ -5,6 +5,11 @@ import { Translate } from '@google-cloud/translate';
 const translator = new Translate({
     key: 'AIzaSyCj0SwvjXBthtNYNhFw8Oe3gfg-7XX2MQ4'
 });
+export default function Translate ()  {
+    const [text, setText] = useState('');
+    const [translatedText, setTranslatedText] = useState('');
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
 
 export default TranslationComponent = () => {
   const [inputText, setInputText] = useState('');
@@ -18,6 +23,21 @@ export default TranslationComponent = () => {
     // Detect language
     const [detections] = await translator.detect(text);
     const inputLanguage = detections[0].language;
+        try {
+            const response = await axios.post(
+                'https://translation.googleapis.com/language/translate/v2',
+                {
+                    q: text,
+                    source: 'en', // Source language code (English)
+                    target: 'fr', // Target language code (French)
+                    format: 'text',
+                },
+                {
+                    params: {
+                        key: 'AIzaSyCj0SwvjXBthtNYNhFw8Oe3gfg-7XX2MQ4', // 
+                    },
+                }
+            );
 
     // Translate text
     const [translation] = await translator.translate(text, targetLanguage);
