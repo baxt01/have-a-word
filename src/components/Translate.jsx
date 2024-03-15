@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-export default Translate = () => {
+export default function Translate ()  {
     const [text, setText] = useState('');
     const [translatedText, setTranslatedText] = useState('');
     const [loading, setLoading] = useState(false);
