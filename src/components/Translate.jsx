@@ -22,7 +22,7 @@ export default function Translate ()  {
                 },
                 {
                     params: {
-                        key: 'AIzaSyCj0SwvjXBthtNYNhFw8Oe3gfg-7XX2MQ4', // Replace with your Google Cloud Translate API key
+                        key: 'AIzaSyCj0SwvjXBthtNYNhFw8Oe3gfg-7XX2MQ4', // 
                     },
                 }
             );
