@@ -11,16 +11,16 @@
 
 /* Centered text */
 .centered {
-  color:aliceblue;
+  color:rgb(255, 254, 254);
   position: absolute;
-  top: 30%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 .logo-image {
   position: absolute;
   max-height: 70px;
-  top: 20px;
+  top: 170px;
   left: 450px;
   
 }
