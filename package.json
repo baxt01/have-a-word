@@ -12,8 +12,8 @@
   "dependencies": {
     "@google-cloud/translate": "^8.1.0",
     "axios": "^1.6.7",
-    "dotenv": "^16.4.5",
     "bootstrap": "^5.3.3",
+    "dotenv": "^16.4.5",
     "flowbite-react": "^0.7.3",
     "axios": "^1.6.7",
     "react": "^18.2.0",
