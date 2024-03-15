@@ -4,8 +4,7 @@ import App from './App.jsx'
 import './index.css'
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import * as bootstrap from 'bootstrap';
-require('dotenv').config()
-console.log(process.env) // remove this after you've confirmed it is working
+//  import 'dotenv/config'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <>
