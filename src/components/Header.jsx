@@ -13,7 +13,7 @@ export default function Header() {
       <img src={jumbotronPic} className="jumbo-image" alt="person reading" />
         <img src={logo} className="logo-image" alt="Have a word logo" />
         <div className="centered"><h1>Welcome to Have a word!</h1>
-        <span>A translation service, dictionary and learning quiz all in one click.</span></div>
+        <span>A translation app, dictionary and learning quiz all in a few clicks.</span></div>
       </div>
     </div>
 
