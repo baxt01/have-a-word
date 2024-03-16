@@ -37,6 +37,7 @@ export default function Dictionary() {
 
       <input
         type="text"
+        name='searchWord'
         className="form-control"
         placeholder="Search for a word"
         value={searchWord}
