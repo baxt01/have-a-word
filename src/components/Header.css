@@ -1,15 +1,26 @@
 .jumbo-image {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-  }
+  
+  background-position:  center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 1300px;
+  max-height: 500px;
+}
 
 /* Centered text */
 .centered {
-  color:aliceblue;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  color: white;
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.logo-image {
+  position: absolute;
+  max-height: 70px;
+  top: 200px;
+  left: 580px;
 }
