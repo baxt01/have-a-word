@@ -51,7 +51,7 @@ export default function Dictionary() {
         Search
       </button>
 
-      <div classname="">
+      <div className="">
         <p>Noun</p>
         <ul>
           <li>definition</li>
@@ -60,7 +60,7 @@ export default function Dictionary() {
           <li>antonyms</li>
         </ul>
       </div>
-      <div classname="">
+      <div className="">
         <p>Noun</p>
         <ul>
           <li>definition</li>
