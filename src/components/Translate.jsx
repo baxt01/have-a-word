@@ -12,7 +12,7 @@ const selectfromLanguage = [
     'te', 'th', 'ti', 'ts', 'tr', 'tk', 'ak', 'uk', 'ur', 'ug', 'uz', 'vi', 'cy', 'xh', 'yi', 'yo', 'zu'
 ];
 
-export default TranslationComponent = () => {
+const TranslationComponent = () => {
     const [text, setText] = useState('');
     const [sourceLanguage, setSourceLanguage] = useState('');
     const [translatedText, setTranslatedText] = useState('Ready to translate');
@@ -76,4 +76,4 @@ export default TranslationComponent = () => {
     );
 };
 
-// export default TranslationComponent;
+export default TranslationComponent;
