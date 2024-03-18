@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+
 const selectfromLanguage = [
     'af', 'sq', 'am', 'ar', 'hy', 'as', 'ay', 'az', 'bm', 'eu', 'be', 'bn', 'bho', 'bs', 'bg', 'ca', 'ceb',
     'zh-CN or zh (BCP-47)', 'zh-TW (BCP-47)', 'co', 'hr', 'cs', 'da', 'dv', 'doi', 'nl', 'en', 'eo', 'et', 'ee',
@@ -29,16 +30,18 @@ const TranslationComponent = () => {
                 {
                     q: text,
                     source: sourceLanguage,
-                    target: 'en', // Target language code (French)
+                    target: 'en', // Target language code (English)
                     format: 'text',
                 },
                 {
                     params: {
-                        key: 'AIzaSyCj0SwvjXBthtNYNhFw8Oe3gfg-7XX2MQ4' // Replace with your Google Cloud Translation API key
+                        key: process.env.REACT_APP_TRANSLATE_API_KEY
                     },
                 }
             );
             setTranslatedText(response.data.data.translations[0].translatedText);
+            console.log(translatedText); // getting the translated text after submission.
+            console.log(text); // getting the original text typed by the user.
             setLoading(false);
         } catch (error) {
             setError(error.message);
@@ -48,13 +51,13 @@ const TranslationComponent = () => {
 
     return (
         <div className= 'mx-3 my-3'>
-            <textarea className='rounded border-2 border-danger mx-1 my-1'
+            <textarea className='rounded border-2 border-dark-subtle mx-1 my-1'
                 name='text'
                 value={text}
                 onChange={(e) => setText(e.target.value)}
                 placeholder="Type something..."
             />
-            <select className='rounded border-2 border-black mx-2 my-2'
+            <select className='rounded border-2 border-dark-subtle mx-2 my-2'
                 name='languageSelection'
                 value={sourceLanguage}
                 onChange={(e) => setSourceLanguage(e.target.value)}
@@ -63,7 +66,7 @@ const TranslationComponent = () => {
                     <option key={language} value={language}>{language}</option>
                 ))}
             </select>
-            <button className='btn btn-info border-info-subtle text-dark-subtle' name='translate' onClick={translateText} disabled={loading}>
+            <button className='btn btn-info border-dark-subtle text-dark-subtle' name='translate' onClick={translateText} disabled={loading}>
                 Translate
             </button>
             {loading && <div>Loading...</div>}
