@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-
+// Language codes to choose your base language from.
 const selectfromLanguage = [
     'af', 'sq', 'am', 'ar', 'hy', 'as', 'ay', 'az', 'bm', 'eu', 'be', 'bn', 'bho', 'bs', 'bg', 'ca', 'ceb',
     'zh-CN or zh (BCP-47)', 'zh-TW (BCP-47)', 'co', 'hr', 'cs', 'da', 'dv', 'doi', 'nl', 'en', 'eo', 'et', 'ee',
@@ -13,6 +13,7 @@ const selectfromLanguage = [
     'te', 'th', 'ti', 'ts', 'tr', 'tk', 'ak', 'uk', 'ur', 'ug', 'uz', 'vi', 'cy', 'xh', 'yi', 'yo', 'zu'
 ];
 
+// setting the useState options for all the options through the code.
 const TranslationComponent = () => {
     const [text, setText] = useState('');
     const [sourceLanguage, setSourceLanguage] = useState('');
@@ -20,32 +21,41 @@ const TranslationComponent = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
+    // starting the async await function
     const translateText = async () => {
+        // changing the setLoading to True.
         setLoading(true);
+        // preparing the setError as null.
         setError(null);
 
+        // creating a try catch block for the await POST through axios.
         try {
             const response = await axios.post(
                 'https://translation.googleapis.com/language/translate/v2',
                 {
                     q: text,
-                    source: sourceLanguage,
+                    source: sourceLanguage, // calling the users chosen base language.
                     target: 'en', // Target language code (English)
-                    format: 'text',
+                    format: 'text', // defining the format of the API response as text.
                 },
                 {
                     params: {
+                        // calling the API key from the dotenv file in the process function of vite.
                         key: process.env.REACT_APP_TRANSLATE_API_KEY
                     },
                 }
             );
+            // getting the first API response and giving it to the useState.
             setTranslatedText(response.data.data.translations[0].translatedText);
+            
             console.log(translatedText); // getting the translated text after submission.
             console.log(text); // getting the original text typed by the user.
-            setLoading(false);
+
+            setLoading(false); // changing the setLoading to false now the response is gained.
+                // catching any errors from the POST / response.
         } catch (error) {
-            setError(error.message);
-            setLoading(false);
+            setError(error.message); // putting any error messages into the useState.
+            setLoading(false); // changing the useState setLoading to false.
         }
     };
 
