@@ -23,6 +23,8 @@ const Nav = () => {
                  <button className='contact'>Contact</button>
             </div>
         </div>
+        
+
     </nav>
   )
 }
