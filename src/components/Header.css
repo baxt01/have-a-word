@@ -1,26 +1,26 @@
 .jumbo-image {
-  background-image: url('path/to/jumbotron-image.jpg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 80vh;
-  }
-  .header-jumbo {
-    position: relative
-  }
+  
+  background-position:  center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 1300px;
+  max-height: 500px;
+}
 
 /* Centered text */
 .centered {
-  color:rgb(255, 254, 254);
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  color: white;
   position: absolute;
-  top: 70%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .logo-image {
   position: absolute;
   max-height: 70px;
-  top: 170px;
-  left: 450px;
-  
+  top: 200px;
+  left: 580px;
 }
