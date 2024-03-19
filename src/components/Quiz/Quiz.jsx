@@ -36,3 +36,47 @@ const Quiz = ({ questions }) => {
       
     }
   };
+  
+  useEffect(() => {
+    if ((currentQuestion + 1) % 10 === 0 && currentQuestion !== 0) {
+      
+    }
+  }, [currentQuestion, score]);
+
+  return currentQuestion < 10 ? (
+    <div className="holder flex justify-center items-center">
+      <h2>Question {currentQuestion + 1}</h2>
+      <p className='query-name'>{questions[currentQuestion].word}</p>
+      <ul>
+        {questions[currentQuestion].options.map((option, index) => (
+          <li className="list-name" key={index}>
+            <label>
+              <input
+                type="radio"
+                name="answer"
+                value={option}
+                checked={selectedAnswer === option}
+                onChange={() => handleAnswerSelect(option)}
+              />
+              {option}
+            </label>
+          </li>
+        ))}
+      </ul>
+      {!isCorrect && <p style={{ color: 'red' }}>Incorrect answer.</p>}
+      <button className="button-next text-white" onClick={handleNextQuestion}>
+        Next
+      </button>
+      
+      <h2>Your Score: {score}</h2>
+    </div>
+  ) : (
+    <div className="final-score">
+      <h2>Quiz ended! Your final score is {score}</h2>
+    </div>
+  );
+  
+  
+};
+
+export default Quiz;
