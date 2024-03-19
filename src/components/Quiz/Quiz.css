@@ -22,11 +22,10 @@
 
 
 .holder {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 400px;
-    margin: 50px;
+    font-family: var(--body-font);
+    margin: 10px;
+    padding: 50px;
+  background-color: aquamarine;
     
 }
 .list-name {
@@ -44,4 +43,11 @@ h2 {
 }
 .button-next  {
     background-color: rgb(25, 55, 3);
+}
+
+.final-score {
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;
+    background-color: aquamarine;
 }

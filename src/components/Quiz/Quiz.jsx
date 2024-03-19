@@ -44,9 +44,13 @@ const Quiz = ({ questions }) => {
   }, [currentQuestion, score]);
 
   return currentQuestion < 10 ? (
-    <div className="holder flex justify-center items-center">
-      <h2>Question {currentQuestion + 1}</h2>
-      <p className='query-name'>{questions[currentQuestion].word}</p>
+    <div className=" flex justify-center items-center">
+        <div className='holder'>
+              <h1>Start Playing Quiz</h1>
+            
+        </div>
+             <h2>Question {currentQuestion + 1}</h2>
+             <p className='query-name'>{questions[currentQuestion].word}</p>
       <ul>
         {questions[currentQuestion].options.map((option, index) => (
           <li className="list-name" key={index}>
@@ -72,6 +76,10 @@ const Quiz = ({ questions }) => {
     </div>
   ) : (
     <div className="final-score">
+         <div className='holder'>
+              <h1>Start Playing Quiz</h1>
+            
+        </div>
       <h2>Quiz ended! Your final score is {score}</h2>
     </div>
   );
