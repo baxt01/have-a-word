@@ -1,3 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap');
+ 
+
+:root{
+
+    --second-gradient: linear-gradient( 180deg,
+            var(--bg-color-alt) 0%, 
+            var(--bg-color) 100%
+     );
+     --third-gradient: linear-gradient( 180deg,
+            var(--bg-color-alt) 0%, 
+            var(--bg-color) 100%
+     );
+
+     /* TYPOGRAPHY */
+
+     --body-font: "Madimi One", sans-serif;
+     --second-font: "Palanquin", sans-serif;
+        }
+
+
 .jumbo-image {
   background-image: url('path/to/jumbotron-image.jpg');
     background-position: center center;
@@ -11,6 +32,7 @@
 
 /* Centered text */
 .centered {
+  font-family: var(--body-font);
   color:rgb(255, 254, 254);
   position: absolute;
   top: 70%;
