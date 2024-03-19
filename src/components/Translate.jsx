@@ -1,9 +1,22 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const Translate = () => {
+
+const selectfromLanguage = [
+    'af', 'sq', 'am', 'ar', 'hy', 'as', 'ay', 'az', 'bm', 'eu', 'be', 'bn', 'bho', 'bs', 'bg', 'ca', 'ceb',
+    'zh-CN or zh (BCP-47)', 'zh-TW (BCP-47)', 'co', 'hr', 'cs', 'da', 'dv', 'doi', 'nl', 'en', 'eo', 'et', 'ee',
+    'fil', 'fi', 'fr', 'fy', 'gl', 'ka', 'de', 'el', 'gn', 'gu', 'ht', 'ha', 'haw', 'he or iw', 'hi', 'hmn', 'hu',
+    'is', 'ig', 'ilo', 'id', 'ga', 'it', 'ja', 'jv or jw', 'kn', 'kk', 'km', 'rw', 'gom', 'ko', 'kri', 'ku', 'ckb',
+    'ky', 'lo', 'la', 'lv', 'ln', 'lt', 'lg', 'lb', 'mk', 'mai', 'mg', 'ms', 'ml', 'mt', 'mi', 'mr', 'mni-Mtei',
+    'lus', 'mn', 'my', 'ne', 'no', 'ny', 'or', 'om', 'ps', 'fa', 'pl', 'pt', 'pa', 'qu', 'ro', 'ru', 'sm', 'sa',
+    'gd', 'nso', 'sr', 'st', 'sn', 'sd', 'si', 'sk', 'sl', 'so', 'es', 'su', 'sw', 'sv', 'tl', 'tg', 'ta', 'tt',
+    'te', 'th', 'ti', 'ts', 'tr', 'tk', 'ak', 'uk', 'ur', 'ug', 'uz', 'vi', 'cy', 'xh', 'yi', 'yo', 'zu'
+];
+
+const TranslationComponent = () => {
     const [text, setText] = useState('');
-    const [translatedText, setTranslatedText] = useState('');
+    const [sourceLanguage, setSourceLanguage] = useState('');
+    const [translatedText, setTranslatedText] = useState('Ready to translate');
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
@@ -16,40 +29,54 @@ const Translate = () => {
                 'https://translation.googleapis.com/language/translate/v2',
                 {
                     q: text,
-                    source: 'en', // Source language code (English)
-                    target: 'fr', // Target language code (French)
+                    source: sourceLanguage,
+                    target: 'en', // Target language code (English)
                     format: 'text',
                 },
                 {
                     params: {
-                        key: 'AIzaSyCj0SwvjXBthtNYNhFw8Oe3gfg-7XX2MQ4', // Replace with your Google Cloud Translate API key
+                        key: process.env.REACT_APP_TRANSLATE_API_KEY
                     },
                 }
             );
-
             setTranslatedText(response.data.data.translations[0].translatedText);
+            console.log(translatedText); // getting the translated text after submission.
+            console.log(text); // getting the original text typed by the user.
+            setLoading(false);
         } catch (error) {
             setError(error.message);
+            setLoading(false);
         }
-
-        setLoading(false);
     };
 
     return (
-        <div>
-            <textarea
+        <div className= 'mx-3 my-3'>
+            <textarea className='rounded border-2 border-dark-subtle mx-1 my-1'
+                name='text'
                 value={text}
                 onChange={(e) => setText(e.target.value)}
-                placeholder="Enter text to translate..."
+                placeholder="Type something..."
             />
-            <button onClick={translateText} disabled={loading}>
+            <select className='rounded border-2 border-dark-subtle mx-2 my-2'
+                name='languageSelection'
+                value={sourceLanguage}
+                onChange={(e) => setSourceLanguage(e.target.value)}
+            >
+                {selectfromLanguage.map(language => (
+                    <option key={language} value={language}>{language}</option>
+                ))}
+            </select>
+            <button className='btn btn-info border-dark-subtle text-dark-subtle' name='translate' onClick={translateText} disabled={loading}>
                 Translate
             </button>
-            {loading && <p>Loading...</p>}
-            {translatedText && <p>Translated Text: {translatedText}</p>}
-            {error && <p>Error: {error}</p>}
+            {loading && <div>Loading...</div>}
+            {error && <div>Error: {error}</div>}
+            <div>
+                <h3>Translated Text:</h3>
+                <p>{translatedText}</p>
+            </div>
         </div>
     );
 };
 
-export default Translate;
+export default TranslationComponent;
