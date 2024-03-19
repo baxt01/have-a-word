@@ -1,0 +1,19 @@
+
+body {
+    font-family: "Merriweather", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  
+/* Footer */
+footer a {
+    margin: 20pt;
+  }
+  
+  footer i.fab {
+    font-size: 2rem;
+  }
+  
+  a.white-link {
+    color: #fff;
+  }
+  
