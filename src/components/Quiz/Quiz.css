@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap');
+ 
+
+:root{
+
+    --second-gradient: linear-gradient( 180deg,
+            var(--bg-color-alt) 0%, 
+            var(--bg-color) 100%
+     );
+     --third-gradient: linear-gradient( 180deg,
+            var(--bg-color-alt) 0%, 
+            var(--bg-color) 100%
+     );
+
+     /* TYPOGRAPHY */
+
+     --body-font: "Madimi One", sans-serif;
+     --second-font: "Palanquin", sans-serif;
+        }
+
+
+
+
+.holder {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 400px;
+    margin: 50px;
+    
+}
+.list-name {
+    list-style: none;
+    font-family: var(--body-font);
+    color: rgb(6, 63, 83);
+    margin-right: 3px;
+}
+h2 {
+    font-family: var(--body-font);
+}
+.query-name {
+    font-size: xx-large;
+    font-family: var(--second-font);
+}
+.button-next  {
+    background-color: rgb(25, 55, 3);
+}
