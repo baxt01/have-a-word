@@ -7,6 +7,8 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import axios from "axios";
 import DictionaryComponent from "./components/DictionaryComponent.jsx";
+import Quiz from "./components/Quiz/Quiz.jsx";
+import Word from "./utils/quiz.json";
 
 export default function App() {
   const [data, setData] = useState();
@@ -36,6 +38,7 @@ export default function App() {
       <Header />
       <Translate />
       <Dictionary handleSearch={handleSearch} />
+      <Quiz questions={Word.questions} />
       {data && <DictionaryComponent data={data} word={word} audio={audio} />}
     </div>
   );
