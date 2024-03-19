@@ -33,7 +33,6 @@ export default function App() {
   };
   return (
     <div>
-      <Navbar />
       <Header />
       <Translate />
       <Dictionary handleSearch={handleSearch} />
@@ -41,4 +40,3 @@ export default function App() {
     </div>
   );
 }
-
