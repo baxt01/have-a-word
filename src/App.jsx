@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from "react";
 import Translate from "./components/Translate.jsx";
 import "./App.css";
@@ -32,13 +33,34 @@ export default function App() {
     }
   };
 
+=======
+import { useState } from 'react'
+import Translate from './components/Translate.jsx'
+import './App.css'
+import Header from './components/Header'
+import Dictionary from "./components/Dictionary.jsx";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Quiz from './components/Quiz/Quiz.jsx'
+import Word from './utils/quiz.json'
+
+export default function App() {
+  const [count, setCount] = useState(0)
+
+>>>>>>> 6d468885da3ce19d0407ba60665e0bcfc9b932fe
   return (
     <div>
       <Navbar />
       <Header />
       <Translate />
+<<<<<<< HEAD
       <Dictionary handleSearch={handleSearch} />
       {data && <DictionaryComponent data={data} word={word} audio={audio} />}
     </div>
+=======
+      <Dictionary />
+      <Quiz questions={Word.questions} />
+    </>
+>>>>>>> 6d468885da3ce19d0407ba60665e0bcfc9b932fe
   );
 }
+

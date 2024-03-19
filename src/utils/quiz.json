@@ -1,0 +1,106 @@
+{
+  "questions": [
+    {
+      "word": "vivid",
+      "options": ["dazzling", "dull", "radiant", "bright"],
+      "correctOption": "bright"
+    },
+    {
+      "word": "cozy",
+      "options": ["uncomfortable", "snug", "cramped", "comfortable"],
+      "correctOption": "comfortable"
+    },
+    {
+      "word": "plentiful",
+      "options": ["abundant", "limited", "scarce", "copious"],
+      "correctOption": "abundant"
+    },
+    {
+      "word": "precise",
+      "options": ["inaccurate", "accurate", "ambiguous", "exact"],
+      "correctOption": "accurate"
+    },
+    {
+      "word": "delightful",
+      "options": ["unpleasant", "charming", "pleasing", "satisfying"],
+      "correctOption": "pleasing"
+    },
+    {
+      "word": "moderate",
+      "options": ["extreme", "average", "balanced", "excessive"],
+      "correctOption": "average"
+    },
+    {
+      "word": "flexible",
+      "options": ["rigid", "adaptable", "stiff", "pliable"],
+      "correctOption": "adaptable"
+    },
+    {
+      "word": "enthusiastic",
+      "options": ["unenthusiastic", "keen", "eager", "apathetic"],
+      "correctOption": "eager"
+    },
+    {
+      "word": "familiar",
+      "options": ["unknown", "strange", "known", "recognizable"],
+      "correctOption": "known"
+    },
+    {
+      "word": "amiable",
+      "options": ["hostile", "friendly", "antagonistic", "affable"],
+      "correctOption": "friendly"
+    },
+    {
+      "word": "serene",
+      "options": ["agitated", "chaotic", "tranquil", "calm"],
+      "correctOption": "calm"
+    },
+    {
+      "word": "optimistic",
+      "options": ["negative", "hopeful", "cynical", "positive"],
+      "correctOption": "hopeful"
+    },
+    {
+      "word": "vibrant",
+      "options": ["dreary", "lifeless", "lively", "dynamic"],
+      "correctOption": "lively"
+    },
+    {
+      "word": "accessible",
+      "options": ["unavailable", "unattainable", "reachable", "available"],
+      "correctOption": "available"
+    },
+    {
+      "word": "adventurous",
+      "options": ["cautious", "timid", "daring", "bold"],
+      "correctOption": "daring"
+    },
+    {
+      "word": "confident",
+      "options": ["uncertain", "self-assured", "assured", "doubtful"],
+      "correctOption": "self-assured"
+    },
+    {
+      "word": "energetic",
+      "options": ["sluggish", "listless", "vigorous", "dynamic"],
+      "correctOption": "vigorous"
+    },
+    {
+      "word": "practical",
+      "options": ["idealistic", "theoretical", "realistic", "feasible"],
+      "correctOption": "realistic"
+    },
+    {
+      "word": "courteous",
+      "options": ["disrespectful", "polite", "rude", "civil"],
+      "correctOption": "polite"
+    },
+    {
+      "word": "resilient",
+      "options": ["vulnerable", "fragile", "able to recover", "tough"],
+      "correctOption": "able to recover"
+    }
+  ]
+}
+
+ 
