@@ -9,6 +9,10 @@ import axios from "axios";
 import DictionaryComponent from "./components/DictionaryComponent.jsx";
 import Quiz from "./components/Quiz/Quiz.jsx";
 import Word from "./utils/quiz.json";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import About from "./components/About.jsx";
+import Nav from "./components/NavBar/Nav.jsx"
+import Footer from "./components/Footer.jsx"
 
 export default function App() {
   const [data, setData] = useState();
@@ -34,12 +38,15 @@ export default function App() {
     }
   };
   return (
-    <div>
-      <Header />
-      <Translate />
-      {/* <Dictionary handleSearch={handleSearch} /> */}
-      <Quiz questions={Word.questions} />
-      {data && <DictionaryComponent data={data} word={word} audio={audio} />}
-    </div>
+    <>
+    <BrowserRouter>
+    <Header /> 
+      <Routes>
+          <Route path="about" element={<About />} />
+      </Routes>
+    </BrowserRouter>
+     
+     <Footer />
+    </>
   );
 }
