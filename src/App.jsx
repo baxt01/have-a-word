@@ -37,7 +37,7 @@ export default function App() {
     <div>
       <Header />
       <Translate />
-      <Dictionary handleSearch={handleSearch} />
+      {/* <Dictionary handleSearch={handleSearch} /> */}
       <Quiz questions={Word.questions} />
       {data && <DictionaryComponent data={data} word={word} audio={audio} />}
     </div>
