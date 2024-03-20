@@ -1,6 +1,6 @@
 import React from 'react'
-import "./About.css"
-import Header from './components/Header'
+
+import Header from './Header'
 
 export default function About() {
   return (
