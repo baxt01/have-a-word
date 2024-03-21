@@ -1,13 +1,14 @@
 import React from 'react'
 import { NavLink } from "react-router-dom";
 import './Nav.css';
+
 const Nav = () => {
   return (
     <>
     <nav className="navbar navbar-expand-md">
     <div className="container-fluid">
         <a className="navbar-brand abs" href="#">Home</a>
-    <nav id="navbar" className="navbar navbar-expand-md navbar-dark bg-dark">
+    <div id="navbar" className="navbar navbar-expand-md navbar-dark bg-dark">
     <div id="navbar" className="container-fluid">
         <a className="nav-link abs" href="#">Home</a>
         <button className="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNavbar">
@@ -34,6 +35,8 @@ const Nav = () => {
                 </li>
             </ul>
         </div>
+    </div>
+    </div>
     </div>
 </nav>
     </>

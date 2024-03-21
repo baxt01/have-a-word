@@ -7,7 +7,7 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import axios from "axios";
 import DictionaryComponent from "./components/DictionaryComponent.jsx";
-import Quiz from "./components/Quiz/Quiz.jsx";
+import Quiz from "./components/Quiz.jsx";
 import Word from "./utils/quiz.json";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./components/About.jsx";
@@ -45,7 +45,7 @@ export default function App() {
       <Routes>
           <Route path="about" element={<About />} />
           <Route path="translate" element={<Translate />} />
-          <Route path="./Quiz/quiz" element={<Quiz />} />
+          <Route path="quiz" element={<Quiz />} />
           <Route path="/" element={<Home />} />
       </Routes>
     </BrowserRouter>
