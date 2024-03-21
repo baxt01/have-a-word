@@ -10,7 +10,7 @@ const Nav = () => {
         {/* <a className="navbar-brand abs" href="#">Home</a> */}
     <div id="navbar" className="navbar navbar-expand-md navbar-dark bg-dark">
     <div id="navbar" className="container-fluid">
-        <a className="nav-link abs" href="#">Home</a>
+        <a className="nav-link abs" href="/">Home</a>
         <button className="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNavbar">
             <span className="navbar-toggler-icon"></span>
         </button>
