@@ -7,7 +7,7 @@ const Nav = () => {
     <>
     <nav className="navbar navbar-expand-md">
     {/* <div className="container-fluid"> */}
-        <a className="navbar-brand abs" href="#">Home</a>
+        {/* <a className="navbar-brand abs" href="#">Home</a> */}
     <div id="navbar" className="navbar navbar-expand-md navbar-dark bg-dark">
     <div id="navbar" className="container-fluid">
         <a className="nav-link abs" href="#">Home</a>
