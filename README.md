@@ -2,11 +2,15 @@
 
 ## Table of Contents:
 
--[Description] (#Description) -[Installation] (#installation) -[Usage] (#usage) -[Credits] (#credits) -[Tests] (#Tests) -[License] (#license)
+-[Description] (#Description) -[Installation] (#installation) -[Usage] (#usage) -[License] (#license) -[Contributors] (#Contributors)
 
 ## Description:
 
 A combination of Translation, Dictionary and Quiz app
+
+# Have a word Website:
+
+- The Website has header and footer on the homepage. navigation bar on the homepage contains links to the pages. Translate link directs to the tranlate and dictionary page. Quiz link directs to the quiz page and About link directs to the About page where you can find the information
 
 # Translator App:
 
@@ -16,10 +20,8 @@ A combination of Translation, Dictionary and Quiz app
 
 # Dictionary App:
 
-- This app gives phonetics, meanings & definitions, synonyms, example and audio sound in the output.
-- Translated text automatically comes in to input of dictionary app.
-- On clicking the search button the result shows on the below card
-- Clear button clear delete the text from the input box
+- This app gives phonetics, meanings & definitions, synonyms, example and audio sound of the given word .
+- The translation app and dictionary app has been linked together. The translated text from the translator app will appear straight on the dictionary card with the meanings, synonyms, example and audio.
 
 # Quiz App:
 
@@ -28,24 +30,42 @@ A combination of Translation, Dictionary and Quiz app
 
 ## Installation:
 
-- need to install packages as below:
-  axios 1.6.7
-  google-cloud/translate
-  bootstrap 5.3.3
-  vite
-  react
+To use this app install below pakages:
+axios 1.6.7
+google-cloud/translate
+bootstrap 5.3.3
+vite 5.1.6
+react
+react-dom
+react-router-dom
+google-cloud translate Api
 
 ## usage:
 
+This aplication is the single platform where the user can integrate with translation app with options of multiple languages to translate in to english. The dictionary app to get the meaning of the translated word and also included with Quiz to know more about english vocabulary.
+
 ## License:
+
+MIT License
 
 ## Contributors:
 
+- Michael Baxter
+- Almas Mansuri
+- Victoria Sugden
+- Jeylan Tesi
+- Tunde Fol
+
 ## App Screenshot:
+
+- Screenshot of Homepage
+- Screenshot of Translate and dictionary page
+- Screenshot of Quiz page
+- Screenshot of ABout page
 
 ## URl of deployed application:
 
-# React + Vite
+https://havaword.netlify.app/
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 

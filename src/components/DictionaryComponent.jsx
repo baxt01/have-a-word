@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 export default function DictionaryComponent({ translatedText }) {
   const [data, setData] = useState(null);
@@ -11,10 +11,12 @@ export default function DictionaryComponent({ translatedText }) {
   useEffect(() => {
     const fetchData = async () => {
       if (!translatedText) return; // No need to fetch if translatedText is empty
-      
+
       setLoading(true);
       try {
-        const response = await axios.get(`https://api.dictionaryapi.dev/api/v2/entries/en/${translatedText}`);
+        const response = await axios.get(
+          `https://api.dictionaryapi.dev/api/v2/entries/en/${translatedText}`
+        );
         setData(response.data);
         setWord(translatedText);
 
@@ -57,26 +59,7 @@ export default function DictionaryComponent({ translatedText }) {
               <h4>
                 <strong>Result for:{word}</strong>
               </h4>
-              <p className="partofspeech">{data[0].meanings[0].partOfSpeech}</p>
-              <p>
-                Phonetics:
-                {data[0].phonetics[0] === undefined
-                  ? "not found"
-                  : data[0].phonetics[0].text}
-              </p>
-              <div>
-                <ul>
-                  <strong>Meaning & Definitions:</strong>
-                </ul>
-                {data[0].meanings[0].definitions[0].definition === undefined
-                  ? "Not found"
-                  : data[0].meanings[0].definitions[0].definition}
-              </div>
-              <div>
-                <p>
-                  <strong>Synonyms:</strong>
-                </p>
-              </div>
+
               {
                 <div>
                   Audio:
@@ -92,6 +75,32 @@ export default function DictionaryComponent({ translatedText }) {
                   )}
                 </div>
               }
+              <p className="partofspeech">{data[0].meanings[0].partOfSpeech}</p>
+              <p>
+                Phonetics:
+                {data[0].phonetics[0] === undefined
+                  ? "not found"
+                  : data[0].phonetics[0].text}
+              </p>
+              <div>
+                <ul>
+                  <strong>Meaning & Definitions:</strong>
+                </ul>
+                {data[0].meanings[0].definitions[0].definition === undefined
+                  ? "Not found"
+                  : data[0].meanings[0].definitions.map((defi) => {
+                      return <li>{defi.definition}</li>;
+                    })}
+              </div>
+              <div>
+                <p>
+                  <strong>Synonyms:</strong>
+                </p>
+                {data[0].meanings[0].synonyms === undefined
+                  ? "Not found"
+                  : data[0].meanings[0].synonyms}
+              </div>
+
               <div>
                 <strong>Example:</strong>
                 {data[0].meanings[0].definitions[0].example === undefined
