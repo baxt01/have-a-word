@@ -5,7 +5,7 @@ import './Nav.css';
 const Nav = () => {
   return (
     <>
-    <nav className="navbar navbar-expand-md">
+    <nav className="navbar navbar-expand-lg">
     {/* <div className="container-fluid"> */}
         {/* <a className="navbar-brand abs" href="#">Home</a> */}
     <div id="navbar" className="navbar navbar-expand-md navbar-dark bg-dark">
