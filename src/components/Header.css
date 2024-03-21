@@ -1,16 +1,15 @@
 .jumbo-image {
-  
-  background-position:  center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  max-width: 1300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1280px;
   max-height: 500px;
 }
 
 /* Centered text */
 .centered {
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: bold;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: lighter;
   color: white;
   position: absolute;
   top: 60%;

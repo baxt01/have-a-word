@@ -7,6 +7,9 @@ const Nav = () => {
     <nav className="navbar navbar-expand-md">
     <div className="container-fluid">
         <a className="navbar-brand abs" href="#">Home</a>
+    <nav id="navbar" className="navbar navbar-expand-md navbar-dark bg-dark">
+    <div id="navbar" className="container-fluid">
+        <a className="nav-link abs" href="#">Home</a>
         <button className="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNavbar">
             <span className="navbar-toggler-icon"></span>
         </button>
@@ -17,15 +20,17 @@ const Nav = () => {
                     <NavLink to="about" className="nav-link">About</NavLink> 
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="//codeply.com">Translate</a>
+                    {/*<a className="nav-link" href="//codeply.com">Translate</a>*/}
+                    <NavLink to="translate" className="nav-link">Translate</NavLink> 
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#myAlert" data-bs-toggle="collapse">Link</a>
+                    {/*<a className="nav-link" href="#myAlert" data-bs-toggle="collapse">Quiz</a>*/}
+                    <NavLink to="quiz" className="nav-link">Quiz</NavLink> 
                 </li>
             </ul>
             <ul className="navbar-nav ms-auto">
                 <li className="nav-item">
-                    <a className="nav-link" href="" data-bs-target="#myModal" data-bs-toggle="modal">Quiz</a>
+                    
                 </li>
             </ul>
         </div>
