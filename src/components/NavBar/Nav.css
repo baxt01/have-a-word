@@ -5,15 +5,20 @@
     background-color: rgb(56, 47, 40) !important;
     width: 100%;
 
+    width: 100%;
+
  }
  .nav-link {
     font-family: 'Courier New', Courier, monospace;
     font-size: larger !important;
     padding-left: 40px !important;
-    
     color: rgb(184, 173, 151) !important;
     margin-right: 15%;
     box-shadow: 15%;
+ }
+
+ .nav-item {
+   margin-right: 50%;
  }
 
  .nav-item {
