@@ -6,7 +6,7 @@ const Nav = () => {
   return (
     <>
     <nav className="navbar navbar-expand-md">
-    <div className="container-fluid">
+    {/* <div className="container-fluid"> */}
         <a className="navbar-brand abs" href="#">Home</a>
     <div id="navbar" className="navbar navbar-expand-md navbar-dark bg-dark">
     <div id="navbar" className="container-fluid">
@@ -37,7 +37,7 @@ const Nav = () => {
         </div>
     </div>
     </div>
-    </div>
+    {/* </div> */}
 </nav>
     </>
   )
