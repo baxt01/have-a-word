@@ -11,13 +11,19 @@
   },
   "dependencies": {
     "@google-cloud/translate": "^8.1.0",
+    "@popperjs/core": "^2.11.8",
+    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/react": "^14.2.2",
+    "@testing-library/user-event": "^14.5.2",
     "axios": "^1.6.7",
     "bootstrap": "^5.3.3",
     "dotenv": "^16.4.5",
     "flowbite-react": "^0.7.3",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.1",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.3",
+    "react-scripts": "^5.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.64",
