@@ -47,7 +47,6 @@ export default function App() {
           <Route path="translate" element={<Translate />} />
           <Route path="./Quiz/quiz" element={<Quiz />} />
           <Route path="/" element={<Home />} />
-          
       </Routes>
     </BrowserRouter>
      <Footer />
