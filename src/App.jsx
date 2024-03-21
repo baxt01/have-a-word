@@ -45,7 +45,7 @@ export default function App() {
       <Routes>
           <Route path="about" element={<About />} />
           <Route path="translate" element={<Translate />} />
-          <Route path="quiz" element={<Quiz />} />
+          <Route path="quiz" element={<Quiz questions={Word.questions} />} />
           <Route path="/" element={<Home />} />
       </Routes>
     </BrowserRouter>

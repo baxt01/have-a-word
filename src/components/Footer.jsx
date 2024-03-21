@@ -1,4 +1,6 @@
 import React from "react";
+import './Footer.css';
+
 function Footer() {
 
     const icons = [
@@ -18,10 +20,10 @@ function Footer() {
     ]
 
     return ( 
-        <section>
+        <section className="footer">
             <footer className="container">
                 <div className="row"> 
-                    <div className="col-lg-8 mx-auto text-center">
+                    <div className="col-lg-8 mx-auto text-center links">
                         {icons.map(icon =>
                         (
                             <a href={icon.link} key={icon.name} target="_blank" rel="noopener noreferrer"><i className={icon.name}></i></a>
