@@ -6,6 +6,7 @@ export default function About() {
   return (
     
     <div id="mission-statement">
+      <br></br>
         <h3>Our mission</h3>
         <br></br>
         <p>As a group we all have a passion to learn languages. For some of us English isn't our first language, so we decided to create an application that could first translate a word from any language into English, offer an audio pronunciation, then display the words meanings in English, and finally reiterating the words in a quiz for emphasis and clarification.</p>

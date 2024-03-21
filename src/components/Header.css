@@ -1,9 +1,11 @@
 .jumbo-image {
-  
-  background-position:  center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  max-width: 1300px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  max-width: 1280px;
   max-height: 500px;
 }
 
