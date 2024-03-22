@@ -58,10 +58,14 @@ MIT License
 
 # App Screenshot:
 
-- Screenshot of Homepage
+- Screenshot of Homepage:
+  ![Home_Screenshot](Home_Screenshot.png)
 - Screenshot of Translate and dictionary page
+  ![Translate_Dictionary_Screenshot](Translate_Dictionary_Screenshot.png)
 - Screenshot of Quiz page
-- Screenshot of ABout page
+  ![Quiz_Screenshot](Quiz_Screenshot.png)
+- Screenshot of About page
+  ![Aboutus_Screenshot](Aboutus_Screenshot.png)
 
 # URL of deployed application:
 
