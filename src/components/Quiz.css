@@ -27,7 +27,7 @@
 
 
 .holder {
-    font-family: var(--body-font);
+    font-family: 'Courier New', Courier, monospace;
     margin: 10px;
     padding: 10px;
     background-color: rgb(194, 163, 139) !important; 

@@ -1,0 +1,11 @@
+.holder {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 10px;
+    padding: 5px;
+    background-color: rgb(194, 163, 139) !important; 
+    align-items: center;
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+ 
+}
