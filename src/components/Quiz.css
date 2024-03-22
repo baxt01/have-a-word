@@ -17,15 +17,25 @@
      --body-font: "Madimi One", sans-serif;
      --second-font: "Palanquin", sans-serif;
         }
+       
+        .button-next {
+            background-color: rgb(194, 163, 139) !important; 
+
+        }
 
 
 
 
 .holder {
-    font-family: var(--body-font);
+    font-family: 'Courier New', Courier, monospace;
     margin: 10px;
-    padding: 50px;
-  background-color: aquamarine;
+    padding: 10px;
+    background-color: rgb(194, 163, 139) !important; 
+    align-items: center;
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  
     
 }
 .list-name {
@@ -42,12 +52,16 @@ h2 {
     font-family: var(--second-font);
 }
 .button-next  {
-    background-color: rgb(25, 55, 3);
+    background-color: rgb(194, 163, 139) ;
+    border-radius: 15px;
 }
 
 .final-score {
     margin: 10px;
     padding: 10px;
     font-size: 30px;
-    background-color: aquamarine;
+    background-color: rgb(194, 163, 139) ;
+}
+h1, h2, p{
+    font-family: 'Courier New', Courier, monospace;
 }

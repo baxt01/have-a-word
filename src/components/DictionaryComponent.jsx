@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import "../style/DictionaryComponent.css";
 
 export default function DictionaryComponent({ translatedText }) {
   const [data, setData] = useState(null);
@@ -57,12 +58,12 @@ export default function DictionaryComponent({ translatedText }) {
           <div className="card-body">
             <div className="List">
               <h4>
-                <strong>Result for:{word}</strong>
+                <strong>Result:{word}</strong>
               </h4>
 
               {
                 <div>
-                  Audio:
+                  <strong>Audio:</strong>
                   {audio === undefined ? (
                     "not found"
                   ) : (
@@ -77,7 +78,7 @@ export default function DictionaryComponent({ translatedText }) {
               }
               <p className="partofspeech">{data[0].meanings[0].partOfSpeech}</p>
               <p>
-                Phonetics:
+                <strong>Phonetics:</strong>
                 {data[0].phonetics[0] === undefined
                   ? "not found"
                   : data[0].phonetics[0].text}
