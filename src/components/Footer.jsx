@@ -15,6 +15,7 @@ function Footer() {
         },
         {
             name: "fab fa-stack-overflow",
+            size: "lg",
             link: "https://stackoverflow.com/users"
         }
     ]
