@@ -47,8 +47,10 @@ const Quiz = ({ questions }) => {
     <div className=" flex justify-center items-center">
         <div className='holder'>
               <h1>Start Playing Quiz</h1>
+              
             
         </div>
+        <br></br>
              <h2>Question {currentQuestion + 1}</h2>
              <p className='query-name'>{questions[currentQuestion].word}</p>
       <ul>
@@ -70,6 +72,7 @@ const Quiz = ({ questions }) => {
       {!isCorrect && <p style={{ color: 'red' }}>Incorrect answer.</p>}
       <button className="button-next text-white" onClick={handleNextQuestion}>
         Next
+        
       </button>
       
       <h2>Your Score: {score}</h2>

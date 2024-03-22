@@ -20,11 +20,11 @@
   margin-bottom: 25px;
   position: relative;
   text-decoration: underline;
-  text-decoration-color: #4caf50;
+  text-decoration-color: rgb(100, 84, 72) ;
 }
 
 #mission-statement p {
-  font-size: 18px;
+  font-size: 20px;
   color: #666;
   margin-bottom: 35px;
 }
@@ -61,7 +61,7 @@ h2 {
   color: #333;
 }
 .content p {
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.5;
   color: #666;
 }
