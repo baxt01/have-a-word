@@ -35,7 +35,7 @@ const TranslationComponent = () => {
                 },
                 {
                     params: {
-                        key: 'AIzaSyBFPvjR5NQrnOESlwB0N6Hc8XstKp7bzao'
+                        key: process.env.REACT_API_KEY
                     },
                 }
             );
